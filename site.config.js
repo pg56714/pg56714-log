@@ -20,6 +20,8 @@ const CONFIG = {
   blog: {
     title: "pg56714-log",
     description: "welcome to pg56714-log!",
+    scheme: "light", // 'light' | 'dark'
+    followSystemTheme: false, // If true, the appearance will be changed according to the system theme on first visit your blog.
   },
 
   // CONFIG configration (required)
