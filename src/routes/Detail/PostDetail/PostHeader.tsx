@@ -40,13 +40,12 @@ const PostHeader: React.FC<Props> = ({ data }) => {
             </div>
           </div>
           <div className="mid">
-            {data.tags && (
-              <div className="tags">
-                {data.tags.map((tag: string) => (
-                  <Tag key={tag}>{tag}</Tag>
-                ))}
-              </div>
-            )}
+            {data.tags &&
+              data.tags.map((tag: string, idx: number) => (
+                <Tag key={tag} tag_id={idx}>
+                  {tag}
+                </Tag>
+              ))}
           </div>
           {data.thumbnail && (
             <div className="thumbnail">
