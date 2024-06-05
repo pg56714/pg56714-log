@@ -11,12 +11,14 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const fields = dynamicPaths.map((path) => ({
     loc: path,
     lastmod: new Date().toISOString(),
+    priority: 0.7,
   }))
 
   // Include the site root separately
   fields.unshift({
     loc: CONFIG.link,
     lastmod: new Date().toISOString(),
+    priority: 1.0,
   })
 
   return getServerSideSitemap(ctx, fields)
